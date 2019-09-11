@@ -26,7 +26,6 @@ def index():
                 some_date = '{}-{:02d}-{:02d}'.format(y, m, 1)
                 if some_date not in existing_dates:
                     missing_dates.append(some_date)
-        del data['fechas']
         data['fechasFaltantes'] = missing_dates
         return to_json(data)
 
